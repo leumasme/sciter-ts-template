@@ -1,0 +1,6 @@
+;!@Install@!UTF-8!
+Title="Snekky Decompiler"
+Progress="no"
+MiscFlags="4"
+RunProgram="pack/build/sciter/scapp.exe public/index.html"
+;!@InstallEnd@!
