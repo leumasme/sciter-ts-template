@@ -2,5 +2,5 @@
 Title="Snekky Decompiler"
 Progress="no"
 MiscFlags="4"
-RunProgram="pack/build/sciter/scapp.exe page/index.html"
+RunProgram="pack/build/sciter/scapp.exe page/index.html --debug"
 ;!@InstallEnd@!
