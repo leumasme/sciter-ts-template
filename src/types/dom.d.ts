@@ -81,7 +81,20 @@ interface Element extends Node {
     childElement(n: number): Element;
     insertAdjacentHTML(where: any, html: any);
     swapWith(otherElement: Element);
+    querySelector(selector: string): Element | null; // Element or Node?
+    /** @description Alias for querySelector */
+    $(selector: string): Element | null;
+    querySelectorAll(selector: string): Element[]; // Element or Node?
+    /** @description Alias for querySelectorAll */
+    $$(selector: string): Element[];
+    /** @description Query parent elements */
+    $p(selector: string): Element | null;
+    /** @description Query owner element, like owner of menu */
+    $o(selector: string);
+    /** @description Check if the selector selects the Element */
+    $is(selector: string): boolean;
     // more Methods https://github.com/c-smile/sciter-js-sdk/blob/main/docs/md/Element.md
+    
 }
 
 interface Node {

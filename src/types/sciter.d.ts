@@ -5,7 +5,7 @@ interface Sciter {
     readonly REVISION: string;
     readonly QUICKJS_VERSION: string;
     /** @description sync version of standard module import(path) */
-    import(path: string): Awaited<typeof import("@env")>;
+    import<T extends string>(path: T): Awaited<typeof import(T)>;
     /** @description Load sciter extension native library (dll/so/dylib) */
     loadLibrary(name: string): Awaited;
     /** @description Parse JSON++ string */
@@ -23,7 +23,7 @@ interface Sciter {
     /** @default encoding "utf-8" */
     decode(bytes: ArrayBuffer, encoidng: string): string;
     /** @default method "lzf" */
-    copress(to: ArrayBuffer, method?: "gz" | "gzip" | "lzf"): ArrayBuffer;
+    compress(to: ArrayBuffer, method?: "gz" | "gzip" | "lzf"): ArrayBuffer;
     /** @default method "lzf" */
     decompress(input: ArrayBuffer, method?: "gz" | "gzip" | "lzf"): ArrayBuffer;
     toBase64(buf: ArrayBuffer): string;
