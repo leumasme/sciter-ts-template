@@ -32,6 +32,8 @@ interface Comment extends Node {
     data: any;
     readonly length: number;
 }
+
+type VNode = [name: string, props: {[string]: any}, children: (string | VNode)[]]
 // readonly for element not fully documented; to test
 // https://github.com/c-smile/sciter-js-sdk/blob/main/docs/md/Element.md
 interface Element extends Node {
