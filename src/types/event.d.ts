@@ -26,15 +26,15 @@ type DragndropEvents = "drag" | "dragenter" | "dragleave" | "drop" | "dragcancel
 type VideoEvents = "play" | "ended" | "videocoordinate" | "videoframeready";
 
 interface Event {
-    bubbles;
-    cancelable;
-    currentTarget;
-    defaultPrevented;
-    eventPhase;
-    target;
-    data: any;
+    bubbles: boolean;
+    cancelable: boolean;
+    currentTarget: null | any;
+    defaultPrevented?;
+    eventPhase: number;
+    target?;
+    data?: any;
     /** @description alias of data */
-    details: any;
+    details?: any;
     keyCode: number;
     platformKeyCode: string;
     code: string;
@@ -42,24 +42,24 @@ interface Event {
     ctrlKey: boolean;
     metaKey: boolean;
     shiftKey: boolean;
-    button;
-    clientX;
-    clientY;
-    screenX;
-    screenY;
-    windowX;
-    windowY;
+    button?;
+    clientX: number;
+    clientY: number;
+    screenX: number
+    screenY: number;
+    windowX: number;
+    windowY: number;
     /** @description Mouse wheel delta, float */
-    deltaX: number;
+    deltaX?: number;
     /** @description Mouse wheel delta, float */
-    deltaY: number;
+    deltaY?: number;
     deltaMode: number;
     /** @description Relative to currentTarget */
     x: number;
     /** @description Relative to currentTarget */
     y: number;
-    source;
-    isOnIcon; // Element?
+    source; // may be null
+    isOnIcon?; // Element?
     preventDefault();
     stopImmidiatePropagation();
     stopPropagation();

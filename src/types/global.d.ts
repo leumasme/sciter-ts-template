@@ -19,10 +19,10 @@ interface Response {
 }
 // todo default fetch options + extra 
 // https://github.com/c-smile/sciter-js-sdk/tree/main/docs/md#fetchurlstring--optionsobject-response---fetch-api
-function fetch(url: string, options?: any)
+function fetch(url: string, options?)
 
 // todo find out exact arg types
-function getComputedStyle(element: any, pseudoEl?: any): Element_Style
+function getComputedStyle(element, pseudoEl?): Element_Style
 
 function printf(format: string, ...args: any[]): string
 function scanf(format: string, input: string): any[];

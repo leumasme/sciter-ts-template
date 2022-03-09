@@ -9,7 +9,7 @@ interface Sciter {
     /** @description Load sciter extension native library (dll/so/dylib) */
     loadLibrary(name: string): Awaited;
     /** @description Parse JSON++ string */
-    parseValue(string): any;
+    parseValue(data: string): any;
     devicePixels(length: number | string, axis?: "width" | "height");
     /** @description Subscribe to a DOM event */
     on(eventname: string, selector?: string, handler: (...args)=>any);
@@ -30,6 +30,4 @@ interface Sciter {
     fromBase64(str: string): ArrayBuffer;
     md5(input: ArrayBuffer): string;
     crc32(input: ArrayBuffer): number;
-
-
 }
