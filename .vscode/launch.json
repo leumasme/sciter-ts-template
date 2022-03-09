@@ -5,14 +5,16 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "node",
+            "type": "node-terminal", // hack - dont know how to properly run command
             "request": "launch",
-            "name": "Launch Program",
-            "program": "${workspaceFolder}/build/index.js",
-            "preLaunchTask": "tsc: build - tsconfig.json",
-            "outFiles": [
-                "${workspaceFolder}/build/**/*.js"
-            ]
+            "name": "Launch Externally",
+            "command": "pack/build/sciter/scapp.exe page/index.html"
+        },
+        {
+            "type": "node-terminal", // hack - dont know how to properly run command
+            "request": "launch",
+            "name": "Pack and Run",
+            "command": "pack/pack.ps1; pack/output.exe"
         }
     ]
 }
