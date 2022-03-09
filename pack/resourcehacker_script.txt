@@ -5,6 +5,6 @@ Log = CONSOLE
 
 [COMMANDS]
 -delete ICONGROUP,1,1033 // Delete default icon
--addoverwrite public/icon.ico,ICONGROUP,MAINICON,0 // Add icon
+-addoverwrite page/icon.ico,ICONGROUP,MAINICON,0 // Add icon
 -addoverwrite pack/manifest.rc,MANIFEST,1,1033 // Add manifest
 -addoverwrite pack/build/versioninfo.res // Add version info

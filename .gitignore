@@ -1,5 +1,6 @@
 /node_modules/
-/public/build/
+/page/js/
 /pack/build/
 /pack/output.exe
 .DS_Store
+tsconfig.tsbuildinfo

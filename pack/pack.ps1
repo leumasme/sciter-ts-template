@@ -67,7 +67,7 @@ if (-not(Test-Path -Path $sdkpath -PathType Leaf)) {
 }
 Remove-Module $7zlib
 
-& "pack/build/7zcli/7za.exe" a "pack/build/data.7z" "pack/build/sciter/scapp.exe" "public"
+& "pack/build/7zcli/7za.exe" a "pack/build/data.7z" "pack/build/sciter/scapp.exe" "page"
 
 Get-Content $sdkpath,"pack/7zSD_config.txt","pack/build/data.7z" -Encoding Byte -Read 512 | Set-Content "pack/build/output.exe" -Encoding Byte
 
