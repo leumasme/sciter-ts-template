@@ -150,6 +150,6 @@ interface Brush__Static {
 }
 interface Brush {
     type: number;
-    /** @argument pos 0..1 */
+    /** @param pos 0..1 */
     addColorStop(pos: number, color: Color): Brush;
 }
