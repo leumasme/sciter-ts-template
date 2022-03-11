@@ -194,10 +194,10 @@ interface Element extends Node {
         relativeTo?: "screen" | "document" | "window" | "parent" | "self",
         window: "attached" | "detached" | "popup"
     })
-    append(vnode: VNode);
-    prepend(vnode: VNode);
-    /** Replaces element content with the VNode */
-    content(vnode: VNode);
+    append(vnode: VNode | VNode[]);
+    prepend(vnode: VNode | VNode[]);
+    /** Replaces element content with the VNode(s) */
+    content(vnode: VNode | VNode[]);
     /** 
      * patches content of the element by vnode using rules of React[or]
      * @default onlyChildren true 
