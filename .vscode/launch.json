@@ -8,7 +8,7 @@
             "type": "node-terminal", // hack - dont know how to properly run command
             "request": "launch",
             "name": "Launch Externally",
-            "command": "pack/build/sciter/scapp.exe page/index.html"
+            "command": "npx tsc; pack/build/sciter/scapp.exe page/index.html --debug",
         },
         {
             "type": "node-terminal", // hack - dont know how to properly run command

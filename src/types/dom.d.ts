@@ -138,7 +138,8 @@ interface Element extends Node {
      * prefix eventname with ^ to handle in capturing phase
      * eventname may contain namespace part like "click.mynamespace"
      */
-    on(eventname: string, selector?: string, handler: (this: this, event, matchedElement?) => any): this;
+    on(eventname: string, selector: string, handler: (this: this, event, matchedElement?) => any): this;
+    on(eventname: string, handler: (this: this, event, matchedElement?) => any): this;
     off(eventname: string): this;
     /**
      * eventname may contain namespace part like "click.mynamespace"
@@ -194,7 +195,7 @@ interface Element extends Node {
         relativeTo?: "screen" | "document" | "window" | "parent" | "self",
         window: "attached" | "detached" | "popup"
     })
-    append(vnode: VNode | VNode[]);
+    append(vnode: VNode | VNode[]): boolean;
     prepend(vnode: VNode | VNode[]);
     /** Replaces element content with the VNode(s) */
     content(vnode: VNode | VNode[]);
